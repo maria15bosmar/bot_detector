@@ -4,7 +4,7 @@
 - scrap.py: contiene una función que devuelve información de 101 tweets de un usuario determinado.
 - test_processing.ipynb: cuaderno jupyter. Predice si un usuario es o no un bot.
 
-# Paquetes de python necesarios.
+## Paquetes de python necesarios.
 - numpy.
 - pandas.
 - nltk.
