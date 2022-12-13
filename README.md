@@ -10,4 +10,5 @@
 - nltk.
 - snscrape.
 - sklearn.
+
 Detalles y versiones en requirements.txt.
