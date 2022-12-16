@@ -12,7 +12,7 @@ def get_user_data(user):
     tweets = scrap_user(user)
 
     # CÁLCULO DEL FACTOR REP
-    tweets = pd.read_csv(PATH + "data/example.csv") # Se puede leer el csv de antes.
+    #tweets = pd.read_csv(PATH + "data/example.csv") # Se puede leer el csv de antes.
     contents = tweets["content"]
     toks = []
     sw = nltk.corpus.stopwords
