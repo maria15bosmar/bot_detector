@@ -60,7 +60,6 @@ def get_user_data(user):
 
     # El usuario listo para predecir se guarda en user_data.
     user_data = tweets[["verified", "followersCount", "friendsCount", "tweetsCount", "listedCount", "mediaCount"]].iloc[-1, :].values.tolist()
-    #user_data = tweets[["verified", "followersCount", "friendsCount", "listedCount", "mediaCount"]].iloc[-1, :].values.tolist()
     user_data.insert(0, factor_rep)
     user_data.extend([avg_reply, avg_retweets, avg_likes, avg_quote, hora_rep, user_data[2]-user_data[3]])
     return user_data

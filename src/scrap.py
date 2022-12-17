@@ -15,7 +15,7 @@ def scrap_user(user):
     # Si el usuario no existe se lanza una excepción.
     try:
         sc.entity
-    except KeyError:
+    except (KeyError, ZeroDivisionError) as e:
         raise Exception("Error. This user does not exist or it's a private account.")
     if sc.entity is None:
         raise Exception("Error. This user does not exist or it's a private account.")

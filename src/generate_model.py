@@ -18,7 +18,6 @@ if __name__ == "__main__":
     training["clase"].replace("bot", 1, inplace= True)
     training["clase"].replace("human", 0, inplace= True)
     training.pop("username")
-    training.pop("tweetsCount")
     label = training.pop("clase")
     # Normalización.
     scaler = MinMaxScaler()
@@ -32,7 +31,7 @@ if __name__ == "__main__":
         x_test= data[test_index]
         y_test = label[test_index]
         xgb_= xgb.XGBClassifier(eval_metric = "mlogloss", booster = "gbtree", nthread = 1).fit(x_train,y_train)
-    xgb_.save_model("bot_detect_xgb.model")
+    xgb_.save_model("bot_detect_xgb_5.model")
 
 
 
