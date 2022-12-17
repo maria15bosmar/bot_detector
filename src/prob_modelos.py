@@ -12,6 +12,7 @@ if __name__ == "__main__":
 
 
     print(f"Se acertó {aciertos} de {len(l_user)} de la clase {label_names[now]}")
+    print(f"Porcentaje {(aciertos/len(l_user))*100}")
 
 
 
