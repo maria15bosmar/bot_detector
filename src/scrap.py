@@ -25,7 +25,7 @@ def scrap_user(user):
         if i > limite:
             break
         # Saltamos los retweets.
-        if tw.retweetedTweet is not None:
+        if tw.retweetedTweet is not None or tw.lang not in ["en", "es"]:
             limite+=1
             continue
         contenido = tw.renderedContent.replace(",", "")
@@ -40,5 +40,6 @@ def scrap_user(user):
             ATTR_LIST[15] : tw.quoteCount, ATTR_LIST[16]: tw.sourceUrl, ATTR_LIST[17]: tw.sourceLabel})
 
     output = pd.DataFrame(datos, columns=ATTR_LIST)
+    output.to_csv("output.csv")
     return output
     # output.to_csv("output.csv")
